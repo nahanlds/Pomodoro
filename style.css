@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --cor-de-fundo: linear-gradient(85deg, #8B1FF8 0%, #041832 48.44%, #01080E 100%);
+
+    --cor-btn: linear-gradient(90deg, #B872FF 0%, #144480 100%);
+
+    --cor-card-time-fundo: linear-gradient(0deg, rgba(20, 68, 128, 0.3), rgba(20, 68, 128, 0.03));
+    --cor-borda-time:  #144480;
+
+}
+[data-contexto="foco"] {
+    --cor-de-fundo: linear-gradient(85deg, #8B1FF8 0%, #041832 48.44%, #01080E 100%);
+}
+
+[data-contexto="curto"] {
+    --cor-de-fundo: linear-gradient(-120deg, #0F725C 0%, #041832 48.44%, #01080E 100%);
+}
+
+[data-contexto="longo"] {
+    --cor-de-fundo: linear-gradient(-25deg, #1875E9 0%, #041832 48.44%, #01080E 100%);
+}
+
+body {
+    color: white;
+    background: var(--cor-de-fundo);
+    height: 100vh;
+    width: 100%;
+    background-size: 300% 300%;
+    animation: animacao 7s ease infinite;
+    font-family: 'Poppins', sans-serif;
+}
+
+.card-central {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+
+.card-time {
+    margin-top: 1rem;
+    padding: 1rem;
+    background: var(--cor-card-time-fundo);
+    border: 1px solid var(--cor-borda-time);
+    border-radius: 32px;
+    width: 588px;
+}
+
+.card-time ul{
+    display: flex;
+    justify-content: space-between;
+    width: 410px;
+    margin: 0 auto;
+}
+
+.card-time li {
+    list-style: none;
+}
+
+.card-time button {
+    background: transparent;
+    border: none;
+    color: white;
+    padding: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.card-time button.ativo {
+    background: var(--cor-borda-time);
+    
+}
+
+
+.time{
+    font-size: 110px;
+    font-weight: 600;
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.btn-comecar {
+    display: flex;
+    justify-content: center;
+}
+
+.btn-comecar button{
+    color: white;
+    background: var(--cor-btn);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 10px 15px;
+}
+
+
+@keyframes animacao {
+    from {
+        background-position: 0 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    to {
+        background-position: 0 50%;
+    }
+}
